@@ -1,5 +1,13 @@
 @import './media.css';
 
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-weight: 100 900;  /* Soporta de 100 a 900 */
+  font-display: swap;
+  src: url('../../assets/fonts/Inter-Variable.woff2') format('woff2');
+}
+
 :root {
     --color-primary: #D7764F;
     --color-primary-light: #E1C9AF;
@@ -15,8 +23,8 @@
     --color-pure-black: #000000;
 
     /* Fuentes */
-    --font-title: 'Space Grotesk Variable', sans-serif;
-    --font-body: 'Geist Variable', sans-serif;
+    --font-title: 'Inter Variable', sans-serif;
+    --font-body: 'Inter Variable', sans-serif;
 
     /* Tipografía fluida que escala suavemente entre mobile y desktop */
     --fs-h1: clamp(2.375rem, 1.5rem + 4.375vw, 4rem);           /* 38px → 64px */

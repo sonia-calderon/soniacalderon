@@ -1,0 +1,87 @@
+@import './media.css';
+
+:root {
+    --color-primary: #D7764F;
+    --color-primary-light: #E1C9AF;
+    --color-secondary: #4F7553;
+    --color-secondary-dark: #395537;
+    --color-terciary: #98D2EB;
+    --color-pure-white: #ffffff;   /* neutral-light-light (blanco puro) */
+    --color-neutral-100: #E1E1E1;  /* neutral-light */
+    --color-neutral-300: #AFAFAF;  /* neutral-light-dark */
+    --color-neutral-500: #6E6E6E;  /* neutral-dark-light */
+    --color-neutral-700: #434343;  /* neutral-dark */
+    --color-neutral-900: #1C1C1C;  /* neutral-dark-dark */
+    --color-pure-black: #000000;
+
+    /* Fuentes */
+    --font-title: 'Space Grotesk Variable', sans-serif;
+    --font-body: 'Geist Variable', sans-serif;
+
+    /* Tipografía fluida que escala suavemente entre mobile y desktop */
+    --fs-h1: clamp(2.375rem, 1.5rem + 4.375vw, 4rem);           /* 38px → 64px */
+    --fs-h2: clamp(1.75rem, 1.25rem + 2.5vw, 3rem);             /* 28px → 48px */
+    --fs-h3: clamp(2.875rem, 2.25rem + 3.125vw, 3.625rem);      /* 46px → 58px */
+    --fs-h4: clamp(1.5rem, 1.125rem + 1.875vw, 2.25rem);        /* 24px → 36px */
+    --fs-h5: clamp(1.25rem, 0.875rem + 1.875vw, 2rem);          /* 20px → 32px */
+    --fs-h6: clamp(1.125rem, 0.875rem + 1.25vw, 1.75rem);       /* 18px → 28px */
+    --fs-text: clamp(1.0625rem, 0.875rem + 0.9375vw, 1.4375rem);/* 17px → 23px */
+    --fs-text-sm: clamp(0.875rem, 0.75rem + 0.625vw, 1.25rem);  /* 14px → 20px */
+    --fs-button: clamp(1.25rem, 0.75rem + 2.5vw, 2.125rem);     /* 20px → 34px */
+
+    /* === FONT WEIGHTS === */
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    /* === LETTER SPACING === */
+    --ls-text: 0.015625rem;   /* 0.25px */
+    --ls-button: 0.078125rem; /* 1.25px */
+
+
+    /* Spacing */
+    --space-base: 12px;
+    --space-2xs: calc(var(--space-base) / 3);      /* 4px */
+    --space-xs: calc(var(--space-base) * 2 / 3);   /* 8px */
+    --space-sm: var(--space-base);                 /* 12px */
+    --space-md: calc(var(--space-base) * 4 / 3);   /* 16px */
+    --space-lg: calc(var(--space-base) * 2);       /* 24px */
+    --space-xl: calc(var(--space-base) * 8 / 3);   /* 32px */
+    --space-2xl: calc(var(--space-base) * 4);      /* 48px */
+    --space-3xl: calc(var(--space-base) * 16 / 3); /* 64px */
+
+
+    color-scheme: light;
+}
+
+html:has(#theme-toggle:checked) {
+    color-scheme: dark;
+}
+
+/* === UTILIDADES DE ESPACIADO === */
+.mt-xs { margin-top: var(--space-xs); }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+
+.mb-xs { margin-bottom: var(--space-xs); }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+
+.p-xs { padding: var(--space-xs); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); }
+
+/* === UTILIDADES DE COLOR === */
+.text-light { color: var(--color-neutral-300); }
+.text-medium { color: var(--color-neutral-500); }
+.text-dark { color: var(--color-neutral-900); }
+
+.bg-light { background-color: var(--color-neutral-100); }
+.bg-medium { background-color: var(--color-neutral-300); }
+.bg-dark { background-color: var(--color-neutral-900); }

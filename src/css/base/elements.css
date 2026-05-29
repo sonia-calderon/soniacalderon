@@ -3,8 +3,8 @@ body {
   font-size: var(--fs-text);
   font-weight: var(--fw-regular);
   letter-spacing: var(--ls-text);
-  color: var(--color-neutral-900);
-  background-color: var(--color-neutral-0);
+  color: var(--text-color);
+  background-color: var(--background);
 }
 
 /* === HEADINGS === */
@@ -43,6 +43,7 @@ p {
   font-size: var(--fs-text);
   font-weight: var(--fw-regular);
   letter-spacing: var(--ls-text);
+  color: var(--text-color);
 }
 
 p.small {

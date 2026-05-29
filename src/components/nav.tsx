@@ -1,0 +1,66 @@
+import React, { useEffect } from "react";
+import "../css/components/nav.css";
+import { DarkModeIcon } from "./icons/darkmode";
+import { LightModeIcon } from "./icons/lightmode";
+import { HamburgerIcon } from "./icons/hamburger";
+import { CloseIcon } from "./icons/close";
+
+const navLinks: {
+	href: string;
+	label: string;
+}[] = [
+	{ href: "/quien-soy", label: "Quién Soy" },
+	{ href: "/proyectos", label: "Proyectos" },
+	{ href: "/contacto", label: "Contacto" },
+];
+
+type Theme = "dark" | "light";
+
+export const Nav: React.FC = () => {
+	const [theme, setTheme] = React.useState<Theme>("light");
+	const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
+	const handleThemeMode = () => {
+		setTheme(theme === "light" ? "dark" : "light");
+	};
+
+	useEffect(() => {
+		document.body.setAttribute("data-theme", theme);
+	}, [theme]);
+
+	const handleMenu = () => {
+		setIsOpen(!isOpen);
+	};
+
+	return (
+		<nav className="nav" data-nav-isopen={isOpen}>
+			<div className="nav--mobile">
+				<button onClick={handleMenu}>
+					{isOpen ? (
+						<CloseIcon size={48} color="var(--color-neutral-500)" />
+					) : (
+						<HamburgerIcon size={48} color="var(--color-neutral-500)" />
+					)}
+				</button>
+			</div>
+			<div className="nav_content">
+				<ul className="nav_items">
+					{navLinks.map((item) => (
+						<li className="nav_item">
+							<a href={item.href}>{item.label}</a>
+						</li>
+					))}
+				</ul>
+				<div className="nav_icon-mode">
+					<button onClick={handleThemeMode}>
+						{theme === "light" ? (
+							<DarkModeIcon size={24} color="var(--color-neutral-700)" />
+						) : (
+							<LightModeIcon size={24} color="var(--color-neutral-100)" />
+						)}
+					</button>
+				</div>
+			</div>
+		</nav>
+	);
+};

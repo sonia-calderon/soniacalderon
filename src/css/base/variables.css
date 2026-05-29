@@ -59,11 +59,16 @@
     --space-3xl: calc(var(--space-base) * 16 / 3); /* 64px */
 
 
-    color-scheme: light;
+    --background: var(--color-pure-white);
+    --text-color: var(--color-neutral-700);
+    
 }
 
-html:has(#theme-toggle:checked) {
-    color-scheme: dark;
+
+
+[data-theme="dark"] {
+    --background: var(--color-neutral-700);  
+    --text-color: var(--color-neutral-100);  
 }
 
 /* === UTILIDADES DE ESPACIADO === */

@@ -1,0 +1,6 @@
+@import "../base/variables.css";
+
+.logo {
+    color: var(--color-primary);
+    padding: var(--space-xs);
+}

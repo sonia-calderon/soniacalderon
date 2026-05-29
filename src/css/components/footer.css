@@ -19,3 +19,17 @@
 .footer--content p {
     color: var(--color-secondary-dark);
 }
+
+[data-theme="dark"] {
+    .footer {
+        background-color: var(--background);
+    }
+
+    .footer--content {
+        border-top: 1px solid var(--color-primary);
+    }
+
+    .footer--content p {
+        color: var(--color-primary);
+    }
+}

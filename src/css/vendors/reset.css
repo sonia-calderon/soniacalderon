@@ -74,7 +74,7 @@ p {
 
 body {
   min-height: 100vh; 
-  min-width: 360px; /* para evitar que la web se vea mal en pantallas muy pequeñas */
+  /*min-width: 360px;  para evitar que la web se vea mal en pantallas muy pequeñas */
 }
 
 ul,

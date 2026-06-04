@@ -1,6 +1,6 @@
 import React from "react";
-import { AppLayout } from "./layouts/app.layout";
+import { HomePage } from "./scenes/home";
 
 export const App: React.FC = () => {
-	return <AppLayout />;
+	return <HomePage />;
 };

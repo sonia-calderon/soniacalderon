@@ -6,4 +6,6 @@
     align-items: center;
     padding: var(--space-xs) ;
     position: relative;
+    width: 100%;
+    max-width: 1440px;
 }

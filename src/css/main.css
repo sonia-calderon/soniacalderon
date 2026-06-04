@@ -2,6 +2,3 @@
 @import './vendors/reset.css';
 @import './base/variables.css';
 @import './base/elements.css';
-@import './layout/container.css';
-@import './layout/header.css';
-@import './layout/footer.css';

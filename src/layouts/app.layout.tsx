@@ -4,11 +4,11 @@ import { Main } from "./components/main";
 import { Footer } from "./components/footer";
 import "../css/main.css";
 
-export const AppLayout: React.FC = () => {
+export const AppLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<Main />
+			<Main>{children}</Main>
 			<Footer />
 		</>
 	);

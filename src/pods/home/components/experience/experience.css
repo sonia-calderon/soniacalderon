@@ -1,0 +1,48 @@
+@import "../../../../css/base/variables.css";
+
+.experience {
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+}
+
+.experience__container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-md);
+}
+
+.experience__cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+}
+
+.experience__btns {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    .experience__container {
+        gap: var(--space-2xl);
+        padding: var(--space-2xl);
+    }
+
+    .experience__cards {
+        gap: var(--space-xl);
+        padding: 0;
+        max-width: 920px;
+    }
+
+    .experience__btns {
+        gap: var(--space-lg);
+    }
+}

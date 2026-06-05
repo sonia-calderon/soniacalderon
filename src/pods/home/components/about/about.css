@@ -1,0 +1,106 @@
+@import "../../../../css/base/variables.css";
+
+.about {
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg) var(--space-md);
+    gap: var(--space-md);
+    max-width: 1440px;
+}
+
+.about__avatar img {
+    width: 189px;
+}
+
+.about__content {
+    background-color: var(--color-secondary-dark);
+    width: 100%;
+    border-radius: var(--space-md);
+
+
+    color: white;
+}
+
+.about__content-header {
+    display: flex;
+    gap: var(--space-xs);
+    padding: var(--space-md);
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.about__content-header-ellipse {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+}
+
+.about__content-header-ellipse:nth-child(1) {
+    background-color: var(--color-primary);
+}
+
+.about__content-header-ellipse:nth-child(2) {
+    background-color: var(--color-primary-light);
+}
+
+.about__content-header-ellipse:nth-child(3) {
+    background-color: var(--color-secondary);
+}
+
+.about__content-text {
+    padding: var(--space-md);
+}
+
+.about__content-text code {
+    text-wrap: wrap;
+}
+
+.keyword {
+  color: var(--color-terciary); /* const, return */
+}
+
+.property, .this  {
+  color: var(--color-primary); /* name, role, frontend... */
+}
+
+.string {
+  color: var(--color-pure-white); /* "Sonia", "React"... */
+}
+
+.variable, .method  {
+  color: #CE2626; /* Developer */
+}
+
+.operator, .punctuation {
+  color: #d6c7b0; /* =, &&, === */
+}
+
+@media (min-width: 768px) {
+    .about__container {
+        flex-direction: row;
+        padding: var(--space-2xl) ;
+        gap: var(--space-xl);
+    }
+
+    .about__avatar img {
+        width: 362px;
+    }
+
+    .about__content-header {
+        padding: var(--space-lg) var(--space-xl);
+    }
+
+    .about__content-text {
+        padding: var(--space-lg) var(--space-xl);
+    }
+}
+
+
+@media (min-width: 1200px) { }

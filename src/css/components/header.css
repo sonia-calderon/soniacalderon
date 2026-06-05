@@ -1,11 +1,19 @@
 @import "../base/variables.css";
 
 .header {
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--space-xs) ;
     position: relative;
-    width: 100%;
+    width: 1440px;
     max-width: 1440px;
 }

@@ -6,8 +6,10 @@ import { Nav } from "../../components/nav";
 export const Header: React.FC = () => {
 	return (
 		<header className="header">
-			<Logo />
-			<Nav />
+			<div className="header__container">
+				<Logo />
+				<Nav />
+			</div>
 		</header>
 	);
 };

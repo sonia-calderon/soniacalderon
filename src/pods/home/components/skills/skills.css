@@ -1,0 +1,41 @@
+@import "../../../../css/base/variables.css";
+
+.skills {
+    background-color: var(--color-primary);
+    color: var(--color-pure-white);
+    font-size: var(--fs-h5);
+    padding: var(--space-lg) 0;
+    overflow: hidden;
+}
+
+.skills__wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.skills__content {
+  display: flex;
+  width: max-content;
+  animation: skills-scroll 20s linear infinite;
+}
+
+.skills__content span {
+  flex-shrink: 0;
+  padding-right: var(--space-lg);
+}
+
+@keyframes skills-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills__content {
+    animation: none;
+  }
+}

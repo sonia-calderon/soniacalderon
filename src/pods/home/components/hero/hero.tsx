@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroIlustration } from "../../../../components/icons/hero-ilustration";
+import { HeroIlustration } from "@/components/icons/hero-ilustration";
 import "./hero.css";
 
 export const HeroComponent: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/components/sectionTitle.css";
+import "@/css/components/sectionTitle.css";
 
 interface Props {
 	title: string;

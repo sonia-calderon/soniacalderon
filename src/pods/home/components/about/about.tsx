@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import Avatar from "../../../../assets/images/avatar.png";
+import Avatar from "@/assets/images/avatar.png";
 
 export const AboutComponent: React.FC = () => {
 	return (

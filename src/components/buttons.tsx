@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/components/buttons.css";
+import "@/css/components/buttons.css";
 import { DownloadIcon } from "./icons/download";
 import { ChevronIcon } from "./icons/chevron";
 

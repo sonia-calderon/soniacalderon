@@ -1,4 +1,4 @@
-@import "../base/variables.css";
+@import "@/css/base/variables.css";
 
 .section__title {
     display: flex;

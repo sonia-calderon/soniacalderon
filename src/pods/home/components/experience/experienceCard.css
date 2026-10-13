@@ -1,4 +1,4 @@
-@import "../../../../css/base/variables.css";
+@import "@/css/base/variables.css";
 
 .experience__card {
     border: 1px solid var(--color-primary);

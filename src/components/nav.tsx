@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../css/components/nav.css";
+import "@/css/components/nav.css";
 import { DarkModeIcon } from "./icons/darkmode";
 import { LightModeIcon } from "./icons/lightmode";
 import { HamburgerIcon } from "./icons/hamburger";

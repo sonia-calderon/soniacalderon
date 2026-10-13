@@ -1,7 +1,7 @@
 import React from "react";
 import "./experience.css";
-import { SectionTitle } from "../../../../components/sectionTitle";
-import { PrimaryButton, SecondaryButton } from "../../../../components/buttons";
+import { SectionTitle } from "@/components/sectionTitle";
+import { PrimaryButton, SecondaryButton } from "@/components/buttons";
 import { ExperienceCardComponent } from "./experienceCard";
 import { experienceData } from "./experience.data";
 

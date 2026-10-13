@@ -1,4 +1,4 @@
-@import "../../../../css/base/variables.css";
+@import "@/css/base/variables.css";
 
 .hero {
     background-color: var(--background);

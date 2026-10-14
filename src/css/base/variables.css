@@ -9,11 +9,13 @@
 }
 
 :root {
+    /* Colors */
     --color-primary: #D7764F;
     --color-primary-light: #E1C9AF;
     --color-secondary: #4F7553;
     --color-secondary-dark: #395537;
     --color-terciary: #98D2EB;
+
     --color-pure-white: #ffffff;   /* neutral-light-light (blanco puro) */
     --color-neutral-100: #E1E1E1;  /* neutral-light */
     --color-neutral-300: #AFAFAF;  /* neutral-light-dark */
@@ -22,11 +24,11 @@
     --color-neutral-900: #1C1C1C;  /* neutral-dark-dark */
     --color-pure-black: #000000;
 
-    /* Fuentes */
+    /* Fonts */
     --font-title: 'Inter Variable', sans-serif;
     --font-body: 'Inter Variable', sans-serif;
 
-    /* Tipografía fluida que escala suavemente entre mobile y desktop */
+    /* Fluent typography */
     --fs-h1: clamp(2.375rem, 1.5rem + 4.375vw, 4rem);           /* 38px → 64px */
     --fs-h2: clamp(1.75rem, 1.25rem + 2.5vw, 3rem);             /* 28px → 48px */
     --fs-h3: clamp(2.875rem, 2.25rem + 3.125vw, 3.625rem);      /* 46px → 58px */
@@ -37,12 +39,12 @@
     --fs-text-sm: clamp(0.875rem, 0.75rem + 0.625vw, 1.25rem);  /* 14px → 20px */
     --fs-button: clamp(1.25rem, 0.75rem + 2.5vw, 2.125rem);     /* 20px → 34px */
 
-    /* === FONT WEIGHTS === */
+    /* Font weights */
     --fw-regular: 400;
     --fw-bold: 700;
     --fw-extrabold: 800;
 
-    /* === LETTER SPACING === */
+    /* Letter spacing */
     --ls-text: 0.015625rem;   /* 0.25px */
     --ls-button: 0.078125rem; /* 1.25px */
 
@@ -58,20 +60,19 @@
     --space-2xl: calc(var(--space-base) * 4);      /* 48px */
     --space-3xl: calc(var(--space-base) * 16 / 3); /* 64px */
 
-
+    /* Light theme */
     --background: var(--color-pure-white);
     --text-color: var(--color-neutral-700);
-    
 }
 
 
-
+/* Dark theme */
 [data-theme="dark"] {
     --background: var(--color-neutral-700);  
     --text-color: var(--color-neutral-100);  
 }
 
-/* === UTILIDADES DE ESPACIADO === */
+/* Spacing */
 .mt-xs { margin-top: var(--space-xs); }
 .mt-sm { margin-top: var(--space-sm); }
 .mt-md { margin-top: var(--space-md); }
@@ -90,7 +91,7 @@
 .p-lg { padding: var(--space-lg); }
 .p-xl { padding: var(--space-xl); }
 
-/* === UTILIDADES DE COLOR === */
+/* Colors */
 .text-light { color: var(--color-neutral-300); }
 .text-medium { color: var(--color-neutral-500); }
 .text-dark { color: var(--color-neutral-900); }

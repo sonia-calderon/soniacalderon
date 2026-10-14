@@ -4,7 +4,7 @@ import { DownloadIcon } from "./icons/download";
 import { ChevronIcon } from "./icons/chevron";
 
 type Color = "orange" | "blue";
-type Action = "download" | "view more" | "view less" | undefined;
+type Action = "download" | "view more" | "view less" | "none";
 
 interface Props {
 	text: string;

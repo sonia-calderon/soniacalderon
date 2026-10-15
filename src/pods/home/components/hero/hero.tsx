@@ -8,7 +8,7 @@ export const HeroComponent: React.FC = () => {
 			<div className="hero__container">
 				<div className="hero__content">
 					<h1>
-						¡Hola! <br /> Soy Sonia Calderón
+						Hi! <br /> I'm Sonia Calderón
 					</h1>
 					<h2>Frontend Developer</h2>
 				</div>

@@ -4,7 +4,7 @@ import Avatar from "@/assets/images/avatar.png";
 
 export const AboutComponent: React.FC = () => {
 	return (
-		<section className="about">
+		<section className="about" id="who-i-am">
 			<div className="about__container">
 				<div className="about__avatar">
 					<img src={Avatar} alt="" />
@@ -36,23 +36,33 @@ export const AboutComponent: React.FC = () => {
 								<span className="property">frontend</span>
 								<span className="punctuation">:</span>{" "}
 								<span className="punctuation">[</span>
+								<span className="string">"HTML"</span>
+								<span className="punctuation">,</span>{" "}
+								<span className="string">"CSS"</span>
+								<span className="punctuation">,</span>{" "}
 								<span className="string">"JavaScript"</span>
 								<span className="punctuation">,</span>{" "}
 								<span className="string">"TypeScript"</span>
 								<span className="punctuation">,</span>{" "}
-								<span className="string">"React"</span>
+								<span className="string">"Vite"</span>
 								<span className="punctuation">,</span>{" "}
-								<span className="string">"Angular"</span>
+								<span className="string">"React"</span>
 								<span className="punctuation">,</span>{" "}
 								<span className="string">"Vue"</span>
 								<span className="punctuation">,</span>{" "}
+								<span className="string">"Next.js"</span>
+								<span className="punctuation">,</span>{" "}
 								<span className="string">"Tailwind"</span>
+								<span className="punctuation">],</span>
+								<span className="string">"API Rest"</span>
+								<span className="punctuation">],</span>
+								<span className="string">"Unit testing"</span>
 								<span className="punctuation">],</span>
 								{"\n\n  "}
 								<span className="property">backend</span>
 								<span className="punctuation">:</span>{" "}
 								<span className="punctuation">[</span>
-								<span className="string">"Node.js"</span>
+								<span className="string">"PHP"</span>
 								<span className="punctuation">],</span>
 								{"\n  "}
 								<span className="property">databases</span>
@@ -64,9 +74,9 @@ export const AboutComponent: React.FC = () => {
 								<span className="property">hobbies</span>
 								<span className="punctuation">:</span>{" "}
 								<span className="punctuation">[</span>
-								<span className="string">"📖 Leer"</span>
+								<span className="string">"📖 Reading"</span>
 								<span className="punctuation">,</span>{" "}
-								<span className="string">"🌴 Viajar"</span>
+								<span className="string">"🌴 Traveling"</span>
 								<span className="punctuation">,</span>{" "}
 								<span className="string">"🏋️‍ CrossFit"</span>
 								<span className="punctuation">,</span>{" "}

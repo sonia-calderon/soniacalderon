@@ -9,9 +9,9 @@ const navLinks: {
 	href: string;
 	label: string;
 }[] = [
-	{ href: "/quien-soy", label: "Quién Soy" },
-	{ href: "/proyectos", label: "Proyectos" },
-	{ href: "/contacto", label: "Contacto" },
+	{ href: "#who-i-am", label: "Who I Am" },
+	{ href: "#projects", label: "Projects" },
+	{ href: "#contact", label: "Contact" },
 ];
 
 type Theme = "dark" | "light";

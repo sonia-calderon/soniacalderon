@@ -7,7 +7,7 @@ import { projectsData } from "./projects.data";
 
 export const ProjectsComponent: React.FC = () => {
 	return (
-		<section className="projects">
+		<section className="projects" id="projects">
 			<div className="projects__container">
 				<SectionTitle title="Projects" />
 				<div className="projects__cards">
@@ -15,7 +15,7 @@ export const ProjectsComponent: React.FC = () => {
 						<ProjectsCardComponent key={project.id} project={project} />
 					))}
 				</div>
-				<PrimaryButton text="Quiero ver más" color="orange" action="none" />
+				<PrimaryButton text="I want to see more" color="orange" action="none" />
 			</div>
 		</section>
 	);

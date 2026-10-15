@@ -6,11 +6,11 @@ import { LinkedinIcon } from "@/components/icons/linkedin";
 
 export const ContactComponent: React.FC = () => {
 	return (
-		<section className="contact">
+		<section className="contact" id="contact">
 			<div className="contact__container">
 				<div className="contact__content">
 					<div className="contact__content-text">
-						<h3>¿Hablamos?</h3>
+						<h3>Let's talk!</h3>
 					</div>
 
 					<div className="contact__content-icons">

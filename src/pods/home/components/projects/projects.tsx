@@ -6,16 +6,29 @@ import { ProjectsCardComponent } from "./projectsCard";
 import { projectsData } from "./projects.data";
 
 export const ProjectsComponent: React.FC = () => {
+	const [showAll, setShowAll] = React.useState(false);
+	const reversedProjectsData = [...projectsData].reverse();
+	const visibleCards = showAll
+		? reversedProjectsData
+		: reversedProjectsData.slice(0, 3);
+
+	const buttonText = showAll ? "I want to see less" : "I want to see more";
+
 	return (
 		<section className="projects" id="projects">
 			<div className="projects__container">
 				<SectionTitle title="Projects" />
 				<div className="projects__cards">
-					{[...projectsData].reverse().map((project) => (
+					{visibleCards.map((project) => (
 						<ProjectsCardComponent key={project.id} project={project} />
 					))}
 				</div>
-				<PrimaryButton text="I want to see more" color="orange" action="none" />
+				<PrimaryButton
+					text={buttonText}
+					color="orange"
+					action="none"
+					handleClick={() => setShowAll(!showAll)}
+				/>
 			</div>
 		</section>
 	);

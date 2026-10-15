@@ -59,3 +59,10 @@
         padding: var(--space-3xl) var(--space-2xl) 0 var(--space-2xl);
     }*/
 }
+
+[data-theme="dark"] {
+    .hero__ilustration--circle {
+        fill: #BEBCA0;
+    }
+   
+}

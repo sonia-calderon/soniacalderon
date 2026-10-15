@@ -1,5 +1,6 @@
 @import "@/css/base/variables.css";
 
+/* Primary buttons */
 .btn-primary {
     display: flex;
     align-items: center;
@@ -24,6 +25,7 @@
     color: var(--color-primary);
 }
 
+/* Secondary buttons */
 .btn-secondary {
     display: flex;
     align-items: center;
@@ -42,6 +44,62 @@
     color: var(--color-primary);
 }
 
+/* Shared button transitions */
+.btn-primary,
+.btn-secondary {
+    cursor: pointer;
+}
+
+/* Primary button: lift + shadow */
+.btn-primary {
+    transition:
+        transform 200ms ease,
+        box-shadow 200ms ease,
+        background-color 200ms ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 12%);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* View more / less: color only */
+.btn-secondary {
+    transition: color 200ms ease;
+}
+
+.btn-secondary:hover {
+    opacity: 0.7;
+}
+
+.btn-secondary:active {
+    opacity: 1;
+}
+
+
+/* Chevron rotation */
+.btn-secondary__icon {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 250ms ease;
+}
+
+.btn-secondary__icon.is-open {
+    transform: rotate(180deg);
+}
+
+
+/* Keyboard accessibility */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
 
 
 @media (min-width: 768px) {
@@ -56,5 +114,22 @@
 
     .btn-secondary svg {
         width: 24px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-secondary__icon {
+        transition: none;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .btn-primary:active,
+    .btn-secondary:active {
+        transform: none;
+        box-shadow: none;
     }
 }

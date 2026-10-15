@@ -8,6 +8,7 @@ interface Props {
 
 export const ExperienceCardComponent: React.FC<Props> = (props) => {
 	const { experiences } = props;
+
 	return (
 		<>
 			{experiences.map((experience) => (
@@ -17,7 +18,7 @@ export const ExperienceCardComponent: React.FC<Props> = (props) => {
 						<p>{experience.companyName}</p>
 					</div>
 					<div className="experience__card-year">
-						<p>{experience.year}</p>
+						<p className="small">{experience.year}</p>
 					</div>
 				</div>
 			))}

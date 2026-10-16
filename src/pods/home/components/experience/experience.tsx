@@ -4,6 +4,7 @@ import { SectionTitle } from "@/components/sectionTitle";
 import { PrimaryButton, SecondaryButton } from "@/components/buttons";
 import { ExperienceCardComponent } from "./experienceCard";
 import { experienceData } from "./experience.data";
+import cvPdf from "@/assets/documents/cv.pdf";
 
 export const ExperienceComponent: React.FC = () => {
 	const [showAll, setShowAll] = React.useState(false);
@@ -29,7 +30,9 @@ export const ExperienceComponent: React.FC = () => {
 						color="orange"
 						handleClick={() => setShowAll(!showAll)}
 					/>
-					<PrimaryButton text="Download CV" action="download" color="blue" />
+					<a href={cvPdf} target="_blank" rel="noopener noreferrer">
+						<PrimaryButton text="Download CV" action="download" color="blue" />
+					</a>
 				</div>
 			</div>
 		</section>

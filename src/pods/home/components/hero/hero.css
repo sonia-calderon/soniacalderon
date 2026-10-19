@@ -3,24 +3,15 @@
 .hero {
     background-color: var(--background);
     overflow: hidden;
-
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-
 .hero__container {
     display: flex;
-    justify-content: center;
-    
-  
-}
-
-.hero__ilustration {
-    /* position: relative;
-    right: -10%; */
+    justify-content: center;  
 }
 
 .hero__content {
@@ -28,14 +19,91 @@
     flex-direction: column;
     gap: var(--space-xs);
     padding: var(--space-lg) var(--space-md);
-
     max-width: 1440px;
-    width: 1440px;
+    width: 100%;
 }
-
 
 .hero h2 {
     color: var(--color-primary);
+}
+
+/* Hero illustration */
+.hero__ilustration {
+  width: 100%;
+}
+
+.hero__ilustration svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Mountain */
+.hero__ilustration--mountain {
+  transition: fill 350ms ease;
+}
+
+[data-theme="dark"] .hero__ilustration--mountain {
+    fill: #454B40;
+}
+
+/* Cactus */
+.hero__ilustration--cactus {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: cactus-sway 2s ease-in-out infinite alternate;
+}
+
+@keyframes cactus-sway {
+  from {
+    transform: rotate(-1.5deg) translateX(-3px);
+  }
+
+  to {
+    transform: rotate(1.5deg) translateX(3px);
+  }
+}
+
+/* Sun / Moon */
+.hero__ilustration--circle {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body[data-theme="light"] .hero__ilustration--circle {
+  fill: #D7764F;
+  animation: sun-rise 1.4s ease-in-out both;
+}
+
+body[data-theme="dark"] .hero__ilustration--circle {
+    fill: #F7F0D5;
+    animation: moon-rise 1.4s ease-in-out both;
+}
+
+@keyframes sun-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moon-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -54,15 +122,21 @@
     }
 }
 
-@media (min-width: 1440px) {
-    /*.hero__content {
-        padding: var(--space-3xl) var(--space-2xl) 0 var(--space-2xl);
-    }*/
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero__ilustration--cactus {
+    animation: none;
+  }
+
+  .hero__ilustration--mountain {
+    transform: none;
+  }
+
+  .hero__ilustration--circle {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
 }
 
-[data-theme="dark"] {
-    .hero__ilustration--circle {
-        fill: #BEBCA0;
-    }
-   
-}

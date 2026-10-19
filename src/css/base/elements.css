@@ -70,6 +70,19 @@ button {
   scroll-margin-top: 87px;
 }
 
+/* Smoothly transition background and colors across the entire site */
+body, 
+.header,
+.nav, 
+.hero, 
+.hero__ilustration--mountain,
+.about,
+.experience,
+.projects,
+.contact,
+.footer {
+  transition: background-color 0.8s ease, color 0.8s ease, fill 0.8s ease;
+}
 
 
 

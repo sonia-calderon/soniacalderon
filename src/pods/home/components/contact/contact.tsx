@@ -15,16 +15,16 @@ export const ContactComponent: React.FC = () => {
 
 					<div className="contact__content-icons">
 						<a href="https://github.com/sonia-calderon" target="_blank">
-							<GithubIcon size={46} color="var(--color-neutral-700)" />
+							<GithubIcon size={34} color="var(--color-neutral-700)" />
 						</a>
 						<a href="mailto:soniacalderonruiz@hotmail.com">
-							<MailIcon size={46} color="var(--color-neutral-700)" />
+							<MailIcon size={34} color="var(--color-neutral-700)" />
 						</a>
 						<a
 							href="https://www.linkedin.com/in/sonia-calderon-ruiz/"
 							target="_blank"
 						>
-							<LinkedinIcon size={46} color="var(--color-neutral-700)" />
+							<LinkedinIcon size={34} color="var(--color-neutral-700)" />
 						</a>
 					</div>
 				</div>

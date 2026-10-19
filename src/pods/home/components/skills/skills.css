@@ -16,7 +16,7 @@
 .skills__content {
   display: flex;
   width: max-content;
-  animation: skills-scroll 20s linear infinite;
+  animation: skills-scroll 30s linear infinite;
 }
 
 .skills__content span {

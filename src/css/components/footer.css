@@ -10,14 +10,14 @@
     width: 100%;
 }
 
-.footer--content {
+.footer__content {
     width: 100%;
     border-top: 1px solid var(--color-secondary-dark);
     padding-top: var(--space-md);
     text-align: center;
 }
 
-.footer--content p {
+.footer__content p {
     color: var(--color-secondary-dark);
 }
 
@@ -26,11 +26,11 @@
         background-color: var(--background);
     }
 
-    .footer--content {
+    .footer__content {
         border-top: 1px solid var(--color-primary);
     }
 
-    .footer--content p {
+    .footer__content p {
         color: var(--color-primary);
     }
 }

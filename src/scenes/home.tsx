@@ -1,6 +1,6 @@
 import React from "react";
-import { AppLayout } from "@/layouts/app.layout";
-import { HomeContainer } from "@/pods/home/home.container";
+import { AppLayout } from "@/layouts";
+import { HomeContainer } from "@/pods/home";
 
 export const HomePage: React.FC = () => {
 	return (

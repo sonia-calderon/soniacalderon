@@ -1,5 +1,5 @@
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-text);
   font-weight: var(--fw-regular);
   letter-spacing: var(--ls-text);
@@ -63,6 +63,12 @@ button {
   letter-spacing: var(--ls-button);
 }
 
+/* Links */
+#who-i-am,
+#projects,
+#contact {
+  scroll-margin-top: 87px;
+}
 
 
 

@@ -1,73 +1,209 @@
 @import "@/css/base/variables.css";
 
+/* Navigation */
 .nav {
   padding: var(--space-xs);
 }
 
-.nav[data-nav-isopen='true'] .nav_content {
+.nav__mobile {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: var(--background);
-  border-top: 1px solid var(--text-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-2xl);
-  padding: var(--space-lg);
-}
 
-.nav[data-nav-isopen='false'] .nav_content {
-  display: none;
-}
-
-.nav_items {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  height: 235px; /* REVISAR */
+  padding: var(--space-xl) var(--space-lg);
+
+  background-color: var(--surface);
+  border-top: 1px solid var(--border-color);
+  box-shadow: var(--header-shadow);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    visibility 220ms ease;
 }
 
+/* Mobile menu */
+.nav[data-nav-isopen="true"] .nav__content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Navigation links */
+.nav__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  width: 100%;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__item-link {
+  position: relative;
+  display: inline-block;
+  color: var(--text-color);
+  font-size: var(--fs-text-sm);
+  font-weight: var(--fw-bold);
+}
+
+/* Scribble underline */
+.nav__item-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+
+  height: 5px;
+  background-color: var(--color-primary);
+
+  clip-path: polygon(
+    0 65%,
+    12% 38%,
+    25% 55%,
+    38% 30%,
+    52% 58%,
+    67% 34%,
+    81% 55%,
+    100% 30%,
+    100% 65%,
+    82% 82%,
+    67% 61%,
+    52% 85%,
+    38% 60%,
+    25% 83%,
+    12% 65%,
+    0 88%
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.nav__item-link:hover::after,
+.nav__item-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.nav__item-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 8px;
+}
+
+/* Buttons */
 .nav button {
-  background: none;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 0;
+  border: none;
+  background: none;
 }
 
+/* Theme toggle */
+.nav__icon-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__icon-mode button {
+  padding: var(--space-2xs);
+
+  transition:
+    transform 200ms ease,
+    background-color 200ms ease;
+}
+
+.nav__icon-mode button:hover {
+  transform: scale(1.12);
+}
+
+.nav__icon-mode button:active {
+  transform: scale(0.95);
+}
+
+.nav__icon-mode button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+/* Desktop */
 @media (min-width: 768px) {
-  .nav {
-    padding: var(--space-lg);
-  }
-
-  .nav[data-nav-isopen='false'] .nav_content, .nav[data-nav-isopen='true'] .nav_content {
-    display: flex;
-    position: static;
-    border-top: none;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: var(--space-3xl);
-  }
-
-  .nav_items {
-    flex-direction: row;
-    height: auto;
-    gap: var(--space-3xl);
-    max-width: fit-content;
-  }
-
-  .nav_icon-mode {
-    width: 24px;
-    height: 24px;
-  }
-
-  .nav--mobile {
+  .nav__mobile {
     display: none;
   }
+
+  .nav__content,
+  .nav[data-nav-isopen="true"] .nav__content,
+  .nav[data-nav-isopen="false"] .nav__content {
+    position: static;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xl);
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+
+    transition: none;
+
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .nav__items {
+    flex-direction: row;
+    align-items: center;
+
+    width: auto;
+    gap: var(--space-xl);
+  }
 }
 
-/* FALTA DESKTOP */
+/* Large desktop */
+@media (min-width: 1200px) {
+  .nav__items {
+    gap: var(--space-2xl);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav__item-link::after, 
+  .nav_content,
+  .nav__icon-mode button,
+  .nav__item-link::after {
+    transition: none;
+  }
+}

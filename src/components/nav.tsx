@@ -34,24 +34,35 @@ export const Nav: React.FC = () => {
 
 	return (
 		<nav className="nav" data-nav-isopen={isOpen}>
-			<div className="nav--mobile">
-				<button onClick={handleMenu}>
+			<div className="nav__mobile">
+				<button
+					type="button"
+					aria-label={isOpen ? "Close menu" : "Open menu"}
+					aria-expanded={isOpen}
+					onClick={handleMenu}
+				>
 					{isOpen ? (
-						<CloseIcon size={48} color="var(--color-neutral-500)" />
+						<CloseIcon size={32} color="var(--text-color)" />
 					) : (
-						<HamburgerIcon size={48} color="var(--color-neutral-500)" />
+						<HamburgerIcon size={32} color="var(--text-color)" />
 					)}
 				</button>
 			</div>
-			<div className="nav_content">
-				<ul className="nav_items">
+			<div className="nav__content">
+				<ul className="nav__items">
 					{navLinks.map((item) => (
-						<li className="nav_item">
-							<a href={item.href}>{item.label}</a>
+						<li className="nav__item" key={item.href}>
+							<a
+								className="nav__item-link"
+								href={item.href}
+								onClick={() => setIsOpen(false)}
+							>
+								{item.label}
+							</a>
 						</li>
 					))}
 				</ul>
-				<div className="nav_icon-mode">
+				<div className="nav__icon-mode">
 					<button onClick={handleThemeMode}>
 						{theme === "light" ? (
 							<DarkModeIcon size={24} color="var(--color-neutral-700)" />

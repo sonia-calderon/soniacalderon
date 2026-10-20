@@ -202,6 +202,10 @@
 
 [data-theme="dark"] {
     .projects__card {
+        background-color: var(--color-neutral-700);
+    }
+
+    a.projects__card-btn-github {
         background-color: var(--color-neutral-900);
     }
 }

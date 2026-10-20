@@ -16,6 +16,10 @@
     max-width: 1440px;
 }
 
+.about__avatar {
+    animation: avatar-enter 800ms ease-out both;
+}
+
 .about__avatar img {
     width: 189px;
 }
@@ -24,9 +28,16 @@
     background-color: var(--color-secondary-dark);
     width: 100%;
     border-radius: var(--space-md);
+    color: var(--color-pure-white);
+    animation: panel-enter 700ms ease-out 150ms both;
+    transform-origin: center;
+    transition:
+        box-shadow 300ms ease,
+        background-color 300ms ease;
+}
 
-
-    color: white;
+.about__content:hover {
+    box-shadow: 0 12px 32px rgb(0 0 0 / 15%);
 }
 
 .about__content-header {
@@ -40,26 +51,40 @@
     width: 16px;
     height: 16px;
     border-radius: 100%;
+    transition: transform 250ms ease;
 }
 
 .about__content-header-ellipse:nth-child(1) {
     background-color: var(--color-primary);
+    transform: scale(1.15);
 }
 
 .about__content-header-ellipse:nth-child(2) {
     background-color: var(--color-primary-light);
+    transform: scale(1.15);
+    transition-delay: 50ms;
 }
 
 .about__content-header-ellipse:nth-child(3) {
     background-color: var(--color-secondary);
+    transform: scale(1.15);
+    transition-delay: 100ms;
 }
 
 .about__content-text {
     padding: var(--space-md);
 }
 
+.about__content-text pre {
+    overflow-x: auto;
+    font-size: clamp(0.7rem, 1.2vw, 0.95rem);
+    line-height: 1.8;
+    tab-size: 2;
+}
+
 .about__content-text code {
     text-wrap: wrap;
+    font-family: monospace;
 }
 
 .keyword {
@@ -67,7 +92,7 @@
 }
 
 .property, .this  {
-  color: var(--color-primary); /* name, role, frontend... */
+  color: #FFC6AD; /* name, role, frontend... */
 }
 
 .string {
@@ -75,11 +100,35 @@
 }
 
 .variable, .method  {
-  color: #CE2626; /* Developer */
+  color: #FF8A80; /* Developer */
 }
 
 .operator, .punctuation {
   color: #d6c7b0; /* =, &&, === */
+}
+
+@keyframes avatar-enter {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes panel-enter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (min-width: 768px) {
@@ -104,3 +153,15 @@
 
 
 @media (min-width: 1200px) { }
+
+@media (prefers-reduced-motion: reduce) {
+    .about__avatar,
+    .about__content {
+        animation: none;
+    }
+
+    .about__content,
+    .about__content-header-ellipse {
+        transition: none;
+    }
+}

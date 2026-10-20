@@ -15,7 +15,8 @@ export const projectsData: Project[] = [
 	{
 		id: "1",
 		name: "Realfooding Shop",
-		description: "",
+		description:
+			"A full-stack e-commerce web app with product browsing, user authentication, and shopping cart.",
 		githubLink: "https://github.com/sonia-calderon/final-project-fullstackdev",
 		liveDemoLink: "",
 		labels: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
@@ -24,8 +25,7 @@ export const projectsData: Project[] = [
 	{
 		id: "2",
 		name: "Homer Simpson Webpage",
-		description:
-			"Clone of Homer Simpson’s web page. Chapter: ‘The Computer Wore Menace Shoes’.",
+		description: "Clone of Homer Simpson’s web page.",
 		githubLink: "https://github.com/sonia-calderon/homer-simpson-webpage",
 		liveDemoLink: "https://sonia-calderon.github.io/homer-simpson-webpage/",
 		labels: ["HTML", "CSS", "JavaScript"],
@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
 		id: "5",
 		name: "Random Chapter Generator",
 		description:
-			"A web application enabling users to discover random episodes of The Simpsons with a simple click. It utilizes information sourced from an API.",
+			"A web application enabling users to discover random episodes of The Simpsons with a simple click.",
 		githubLink: "https://github.com/sonia-calderon/random-episode-generator",
 		liveDemoLink: "https://sonia-calderon.github.io/random-episode-generator/",
 		labels: ["HTML", "CSS", "JavaScript", "REST API"],
@@ -64,7 +64,7 @@ export const projectsData: Project[] = [
 		id: "6",
 		name: "Github Finder",
 		description:
-			"A React-based application for viewing GitHub organization members. Users can search for different organizations and navigate to the details of each member.",
+			"A React-based application for viewing GitHub organization members.",
 		githubLink: "https://github.com/sonia-calderon/github-finder",
 		liveDemoLink: "https://sonia-calderon.github.io/github-finder/",
 		labels: ["React", "Material UI", "TypeScript", "Vite"],
@@ -74,9 +74,9 @@ export const projectsData: Project[] = [
 		id: "7",
 		name: "Rick & Morty Finder",
 		description:
-			"A React-based application for viewing Rick & Morty characters. Users can search for different characters and navigate to the details.",
-		githubLink: "https://github.com/sonia-calderon/rick-and-morty-finder",
-		liveDemoLink: "https://sonia-calderon.github.io/rick-and-morty-finder/",
+			"A React-based application for viewing Rick & Morty characters.",
+		githubLink: "https://github.com/sonia-calderon/rickandmorty-finder",
+		liveDemoLink: "https://sonia-calderon.github.io/rickandmorty-finder/",
 		labels: ["React", "Material UI", "TypeScript", "Vite"],
 		image: rickAndMortyFinderImage,
 	},
@@ -84,7 +84,7 @@ export const projectsData: Project[] = [
 		id: "8",
 		name: "Bookstore Cart",
 		description:
-			"Small React application that simulates a basic shopping cart experience. Users can browse a list of books, add products to the cart, and remove them dynamically.",
+			"Small React application that simulates a basic shopping cart experience.",
 		githubLink: "https://github.com/sonia-calderon/bookstore-cart",
 		liveDemoLink: "https://sonia-calderon.github.io/bookstore-cart/",
 		labels: ["React", "CSS", "TypeScript", "Vite"],
@@ -93,8 +93,7 @@ export const projectsData: Project[] = [
 	{
 		id: "9",
 		name: "To Do List",
-		description:
-			"Task management application built with React. Users can create, organize, filter, and edit tasks dynamically.",
+		description: "Task management application built with React.",
 		githubLink: "https://github.com/sonia-calderon/to-do-list",
 		liveDemoLink: "https://sonia-calderon.github.io/to-do-list/",
 		labels: ["React", "Material UI", "TypeScript", "Vite"],
@@ -103,8 +102,7 @@ export const projectsData: Project[] = [
 	{
 		id: "10",
 		name: "BookShelf",
-		description:
-			"Personal library management application built with Angular. Users can organize their reading collection, track progress, manage books, and explore their library through a responsive and intuitive interface.",
+		description: "Personal library management application built with Angular.",
 		githubLink: "https://github.com/sonia-calderon/bookshelf",
 		liveDemoLink: "https://sonia-calderon.github.io/bookshelf/",
 		labels: ["Angular", "Angular Material", "TypeScript", "SCSS"],
@@ -113,8 +111,7 @@ export const projectsData: Project[] = [
 	{
 		id: "11",
 		name: "Meal Planner",
-		description:
-			"Meal planning application built with Vue 3. Users can organize their meals throughout the week, manage their dishes, create favorites, and plan meals by weekday and category.",
+		description: "Meal planning application built with Vue.",
 		githubLink: "https://github.com/sonia-calderon/meal-planner",
 		liveDemoLink: "https://sonia-calderon.github.io/meal-planner/",
 		labels: ["Vue", "TypeScript", "TailwindCSS", "Vite"],

@@ -7,19 +7,21 @@ export const AboutComponent: React.FC = () => {
 		<section className="about" id="who-i-am">
 			<div className="about__container">
 				<div className="about__avatar">
-					<img src={Avatar} alt="" />
+					<img src={Avatar} alt="Portrait of Sonia" />
 				</div>
+
 				<div className="about__content">
 					<div className="about__content-header">
 						<div className="about__content-header-ellipse"></div>
 						<div className="about__content-header-ellipse"></div>
 						<div className="about__content-header-ellipse"></div>
 					</div>
+
 					<div className="about__content-text">
 						<pre>
 							<code>
 								<span className="keyword">const</span>{" "}
-								<span className="variable">Developer</span>{" "}
+								<span className="variable">developer</span>{" "}
 								<span className="operator">=</span>{" "}
 								<span className="punctuation">{"{"}</span>
 								{"\n  "}
@@ -33,77 +35,97 @@ export const AboutComponent: React.FC = () => {
 								<span className="string">"Frontend Developer"</span>
 								<span className="punctuation">,</span>
 								{"\n\n  "}
-								<span className="property">frontend</span>
+								<span className="property">techStack</span>
+								<span className="punctuation">:</span>{" "}
+								<span className="punctuation">{"{"}</span>
+								{"\n    "}
+								<span className="property">styling</span>
 								<span className="punctuation">:</span>{" "}
 								<span className="punctuation">[</span>
-								<span className="string">"HTML"</span>
-								<span className="punctuation">,</span>{" "}
 								<span className="string">"CSS"</span>
 								<span className="punctuation">,</span>{" "}
+								<span className="string">"SCSS"</span>
+								<span className="punctuation">,</span>{" "}
+								<span className="string">"Tailwind CSS"</span>
+								<span className="punctuation">],</span>
+								{"\n    "}
+								<span className="property">languages</span>
+								<span className="punctuation">:</span>{" "}
+								<span className="punctuation">[</span>
 								<span className="string">"JavaScript"</span>
 								<span className="punctuation">,</span>{" "}
 								<span className="string">"TypeScript"</span>
-								<span className="punctuation">,</span>{" "}
-								<span className="string">"Vite"</span>
-								<span className="punctuation">,</span>{" "}
+								<span className="punctuation">],</span>
+								{"\n    "}
+								<span className="property">frameworks</span>
+								<span className="punctuation">:</span>{" "}
+								<span className="punctuation">[</span>
 								<span className="string">"React"</span>
 								<span className="punctuation">,</span>{" "}
 								<span className="string">"Vue"</span>
-								<span className="punctuation">,</span>{" "}
+								<span className="punctuation">],</span>
+								{"\n    "}
+								<span className="property">metaFrameworks</span>
+								<span className="punctuation">:</span>{" "}
+								<span className="punctuation">[</span>
 								<span className="string">"Next.js"</span>
 								<span className="punctuation">,</span>{" "}
-								<span className="string">"Tailwind"</span>
+								<span className="string">"TanStack Start"</span>
+								<span className="punctuation">,</span>{" "}
+								<span className="string">"Nuxt"</span>
 								<span className="punctuation">],</span>
-								<span className="string">"API Rest"</span>
+								{"\n    "}
+								<span className="property">tools</span>
+								<span className="punctuation">:</span>{" "}
+								<span className="punctuation">[</span>
+								<span className="string">"Vite"</span>
+								<span className="punctuation">,</span>{" "}
+								<span className="string">"GitHub"</span>
+								<span className="punctuation">,</span>{" "}
+								<span className="string">"Bitbucket"</span>
 								<span className="punctuation">],</span>
-								<span className="string">"Unit testing"</span>
-								<span className="punctuation">],</span>
-								{"\n\n  "}
+								{"\n    "}
 								<span className="property">backend</span>
 								<span className="punctuation">:</span>{" "}
 								<span className="punctuation">[</span>
 								<span className="string">"PHP"</span>
 								<span className="punctuation">],</span>
-								{"\n  "}
+								{"\n    "}
+								<span className="property">apis</span>
+								<span className="punctuation">:</span>{" "}
+								<span className="punctuation">[</span>
+								<span className="string">"REST API"</span>
+								<span className="punctuation">,</span>{" "}
+								<span className="string">"GraphQL"</span>
+								<span className="punctuation">],</span>
+								{"\n    "}
 								<span className="property">databases</span>
 								<span className="punctuation">:</span>{" "}
 								<span className="punctuation">[</span>
 								<span className="string">"MySQL"</span>
 								<span className="punctuation">],</span>
+								{"\n  "}
+								<span className="punctuation">{"}"}</span>
+								<span className="punctuation">,</span>
 								{"\n\n  "}
-								<span className="property">hobbies</span>
+								<span className="property">interests</span>
 								<span className="punctuation">:</span>{" "}
 								<span className="punctuation">[</span>
-								<span className="string">"📖 Reading"</span>
+								<span className="string">"UX"</span>
 								<span className="punctuation">,</span>{" "}
-								<span className="string">"🌴 Traveling"</span>
+								<span className="string">"Clean code"</span>
 								<span className="punctuation">,</span>{" "}
-								<span className="string">"🏋️‍ CrossFit"</span>
-								<span className="punctuation">,</span>{" "}
-								<span className="string">"🏃‍ Running"</span>
+								<span className="string">"Accessibility"</span>
 								<span className="punctuation">],</span>
 								{"\n\n  "}
-								<span className="method">hireable</span>
+								<span className="method">isHireable</span>
 								<span className="punctuation">()</span>{" "}
 								<span className="punctuation">{"{"}</span>
 								{"\n    "}
-								<span className="keyword">return</span> {"\n      "}
-								<span className="this">this</span>
-								<span className="punctuation">.</span>
-								creative <span className="operator">&&</span>
-								{"\n      "}
-								<span className="this">this</span>
-								<span className="punctuation">.</span>
-								problemSolver <span className="operator">&&</span>
-								{"\n      "}
-								<span className="this">this</span>
-								<span className="punctuation">.</span>
-								focus <span className="operator">===</span>{" "}
-								<span className="string">"Clean code & delightful UX"</span>
-								{"\n    "}
-								<span className="punctuation">);</span>
+								<span className="keyword">return</span>{" "}
+								<span className="string">true;</span>
 								{"\n  "}
-								<span className="punctuation">{"}"}</span>
+								<span className="punctuation">{"},"}</span>
 								{"\n"}
 								<span className="punctuation">{"};"}</span>
 							</code>

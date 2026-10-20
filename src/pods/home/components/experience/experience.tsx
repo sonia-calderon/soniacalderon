@@ -8,10 +8,25 @@ import cvPdf from "@/assets/documents/cv.pdf";
 
 export const ExperienceComponent: React.FC = () => {
 	const [showAll, setShowAll] = React.useState(false);
+	const [isHiding, setIsHiding] = React.useState(false);
+
 	const reversedExperienceData = [...experienceData].reverse();
 	const visibleCards = showAll
 		? reversedExperienceData
 		: reversedExperienceData.slice(0, 3);
+
+	const handleToggle = () => {
+		if (showAll) {
+			setIsHiding(true);
+
+			window.setTimeout(() => {
+				setShowAll(false);
+				setIsHiding(false);
+			}, 350);
+		} else {
+			setShowAll(true);
+		}
+	};
 
 	const buttonText = showAll ? "View less" : "View more";
 	const buttonAction = showAll ? "view less" : "view more";
@@ -20,7 +35,11 @@ export const ExperienceComponent: React.FC = () => {
 		<section className="experience">
 			<div className="experience__container">
 				<SectionTitle title="Experience" />
-				<div className="experience__cards">
+				<div
+					className={`experience__cards ${
+						isHiding ? "experience__cards--hiding" : ""
+					}`}
+				>
 					<ExperienceCardComponent experiences={visibleCards} />
 				</div>
 				<div className="experience__btns">
@@ -28,7 +47,7 @@ export const ExperienceComponent: React.FC = () => {
 						text={buttonText}
 						action={buttonAction}
 						color="orange"
-						handleClick={() => setShowAll(!showAll)}
+						handleClick={handleToggle}
 					/>
 					<a href={cvPdf} target="_blank" rel="noopener noreferrer">
 						<PrimaryButton text="Download CV" action="download" color="blue" />

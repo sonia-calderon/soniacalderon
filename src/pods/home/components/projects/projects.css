@@ -24,6 +24,39 @@
     width: 100%;
 }
 
+.projects__cards > * {
+    animation: project-card-enter 350ms ease both;
+}
+
+.projects__cards--hiding > :nth-child(n + 4) {
+    animation: project-card-exit 350ms ease both;
+}
+
+@keyframes project-card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes project-card-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+}
+
+
 /* Projects Card */
 .projects__card {
     display: flex;
@@ -207,5 +240,11 @@
 
     a.projects__card-btn-github {
         background-color: var(--color-neutral-900);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .projects__cards > * {
+        animation: none;
     }
 }

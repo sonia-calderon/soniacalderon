@@ -28,6 +28,10 @@
     animation: experience-card-enter 350ms ease both;
 }
 
+.experience__cards--hiding > :nth-child(n + 4) {
+    animation: experience-card-exit 350ms ease both;
+}
+
 @keyframes experience-card-enter {
     from {
         opacity: 0;
@@ -37,6 +41,18 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes experience-card-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-12px);
     }
 }
 
@@ -60,5 +76,12 @@
 
     .experience__btns {
         gap: var(--space-lg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .experience__cards > *,
+    .experience__cards--hiding > :nth-child(n + 4) {
+        animation: none;
     }
 }

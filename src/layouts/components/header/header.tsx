@@ -1,7 +1,7 @@
 import React from "react";
-import "@/css/components/header.css";
-import { Logo } from "@/components/logo";
-import { Nav } from "@/components/nav";
+import "./header.css";
+import { Logo } from "@/components/logo/logo";
+import { Nav } from "@/components/nav/nav";
 
 export const Header: React.FC = () => {
 	const [isScrolled, setIsScrolled] = React.useState<boolean>(false);

@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import "@/css/components/nav.css";
-import { DarkModeIcon } from "./icons/darkmode";
-import { LightModeIcon } from "./icons/lightmode";
-import { HamburgerIcon } from "./icons/hamburger";
-import { CloseIcon } from "./icons/close";
+import "./nav.css";
+import { DarkModeIcon } from "@/components/icons/darkmode";
+import { LightModeIcon } from "@/components/icons/lightmode";
+import { HamburgerIcon } from "@/components/icons/hamburger";
+import { CloseIcon } from "@/components/icons/close";
 
 const navLinks: {
 	href: string;

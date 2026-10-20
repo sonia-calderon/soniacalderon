@@ -1,4 +1,4 @@
-@import './vendors/normalize.css';
-@import './vendors/reset.css';
-@import './base/variables.css';
-@import './base/elements.css';
+@import '@/css/vendors/normalize.css';
+@import '@/css/vendors/reset.css';
+@import '@/css/base/variables.css';
+@import '@/css/base/elements.css';

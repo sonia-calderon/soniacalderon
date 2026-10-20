@@ -1,7 +1,7 @@
 import React from "react";
 import "./projects.css";
-import { SectionTitle } from "@/components/sectionTitle";
-import { PrimaryButton } from "@/components/buttons";
+import { SectionTitle } from "@/components/sectionTitle/sectionTitle";
+import { PrimaryButton } from "@/components/buttons/buttons";
 import { ProjectsCardComponent } from "./projectsCard";
 import { projectsData } from "./projects.data";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import "@/css/components/buttons.css";
-import { DownloadIcon } from "./icons/download";
-import { ChevronIcon } from "./icons/chevron";
+import "./buttons.css";
+import { DownloadIcon } from "@/components/icons/download";
+import { ChevronIcon } from "@/components/icons/chevron";
 
 type Color = "orange" | "blue";
 type Action = "download" | "view more" | "view less" | "none";

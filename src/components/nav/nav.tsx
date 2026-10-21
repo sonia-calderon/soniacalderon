@@ -22,6 +22,7 @@ export const Nav: React.FC = () => {
 
 	const handleThemeMode = () => {
 		setTheme(theme === "light" ? "dark" : "light");
+		setIsOpen(false);
 	};
 
 	useEffect(() => {

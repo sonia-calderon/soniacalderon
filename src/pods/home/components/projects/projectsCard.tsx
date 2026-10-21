@@ -44,9 +44,17 @@ export const ProjectsCardComponent: React.FC<Props> = (props) => {
 					</a>
 					<a
 						href={project.liveDemoLink}
-						className="projects__card-btn-live"
+						className={`projects__card-btn-live ${
+							project.liveDemoLink === "" ? "disabled" : ""
+						}`}
 						target="_blank"
 						rel="noopener noreferrer"
+						aria-disabled={project.liveDemoLink === ""}
+						onClick={(event) => {
+							if (project.liveDemoLink === "") {
+								event.preventDefault();
+							}
+						}}
 					>
 						<LinkIcon color="var(--color-pure-white)" size={18} />
 						<span>Live Demo</span>

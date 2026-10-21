@@ -193,6 +193,12 @@
         background-color: var(--color-secondary-dark);
         transform: translateY(-2px);
     }
+
+    .projects__card-btn-live.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
 }
 
 

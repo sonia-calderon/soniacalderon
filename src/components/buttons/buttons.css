@@ -14,15 +14,15 @@
 }
 
 .btn-primary.blue {
-    border-color: var(--color-terciary);
-    background-color: var(--background);
-    color: var(--color-terciary);
+    border-color: var(--color-terciary-strong);
+    background-color: var(--color-terciary);
+    color: var(--text-color-on-terciary);
 }
 
 .btn-primary.orange {
-    border-color: var(--color-primary);
+    border-color: var(--text-color-accent);
     background-color: transparent;
-    color: var(--color-primary);
+    color: var(--text-color-accent);
 }
 
 /* Secondary buttons */
@@ -37,11 +37,11 @@
 }
 
 .btn-secondary.blue {
-    color: var(--color-terciary);
+    color: var(--text-color-accent-blue);
 }
 
 .btn-secondary.orange {
-    color: var(--color-primary);
+    color: var(--text-color-accent);
 }
 
 /* Shared button transitions */
@@ -97,7 +97,7 @@
 /* Keyboard accessibility */
 .btn-primary:focus-visible,
 .btn-secondary:focus-visible {
-    outline: 2px solid currentColor;
+    outline: 2px solid var(--focus-ring-color);
     outline-offset: 4px;
 }
 

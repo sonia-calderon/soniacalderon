@@ -65,8 +65,9 @@
   position: relative;
   display: inline-block;
   color: var(--text-color);
-  font-size: var(--fs-text-sm);
+  font-size: var(--fs-text-md);
   font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
 }
 
 /* Scribble underline */
@@ -110,7 +111,7 @@
 }
 
 .nav__item-link:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--focus-ring-color);
   outline-offset: 8px;
 }
 
@@ -123,6 +124,14 @@
   padding: 0;
   border: none;
   background: none;
+
+  color: var(--text-color);
+}
+
+.nav__mobile button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: var(--space-2xs);
 }
 
 /* Theme toggle */
@@ -133,7 +142,9 @@
 }
 
 .nav__icon-mode button {
-  padding: var(--space-2xs);
+  padding: var(--space-xs);
+  min-width: 44px;
+  min-height: 44px;
 
   transition:
     transform 200ms ease,
@@ -149,7 +160,7 @@
 }
 
 .nav__icon-mode button:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--focus-ring-color);
   outline-offset: 4px;
 }
 

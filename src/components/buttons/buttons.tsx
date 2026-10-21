@@ -19,14 +19,7 @@ export const PrimaryButton: React.FC<Props> = (props) => {
 		<button className={`btn-primary ${color}`} onClick={handleClick}>
 			{action === "download" ? (
 				<span>
-					<DownloadIcon
-						size={36}
-						color={
-							color === "blue"
-								? "var(--color-terciary)"
-								: "var(--color-primary)"
-						}
-					/>
+					<DownloadIcon size={36} color="currentColor" />
 				</span>
 			) : (
 				""
@@ -50,14 +43,7 @@ export const SecondaryButton: React.FC<Props> = (props) => {
 		>
 			{isViewButton && (
 				<span className={`btn-secondary__icon ${isOpen ? "is-open" : ""}`}>
-					<ChevronIcon
-						size={18}
-						color={
-							color === "blue"
-								? "var(--color-terciary)"
-								: "var(--color-primary)"
-						}
-					/>
+					<ChevronIcon size={18} color="currentColor" />
 				</span>
 			)}
 			{text}

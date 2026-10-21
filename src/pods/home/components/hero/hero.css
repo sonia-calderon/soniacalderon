@@ -23,8 +23,12 @@
     width: 100%;
 }
 
-.hero h2 {
-    color: var(--color-primary);
+.hero h1 {
+    color: var(--text-color);
+}
+
+.hero__subtitle {
+    color: var(--text-color-accent);
 }
 
 /* Hero illustration */
@@ -44,7 +48,7 @@
 }
 
 [data-theme="dark"] .hero__ilustration--mountain {
-    fill: #454B40;
+    fill: var(--color-mountain-dark);
 }
 
 /* Cactus */
@@ -73,12 +77,12 @@
 }
 
 body[data-theme="light"] .hero__ilustration--circle {
-  fill: #D7764F;
+  fill: var(--color-sun);
   animation: sun-rise 1.4s ease-in-out both;
 }
 
 body[data-theme="dark"] .hero__ilustration--circle {
-    fill: #F7F0D5;
+    fill: var(--color-moon);
     animation: moon-rise 1.4s ease-in-out both;
 }
 

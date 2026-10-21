@@ -6,6 +6,8 @@ export const AboutComponent: React.FC = () => {
 	return (
 		<section className="about" id="who-i-am">
 			<div className="about__container">
+				<h2 className="visually-hidden">About me</h2>
+
 				<div className="about__avatar">
 					<img src={Avatar} alt="Portrait of Sonia" />
 				</div>

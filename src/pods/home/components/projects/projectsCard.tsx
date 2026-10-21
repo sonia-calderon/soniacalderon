@@ -26,7 +26,7 @@ export const ProjectsCardComponent: React.FC<Props> = (props) => {
 				</div>
 				<div className="projects__card-content-texts">
 					<div className="projects__card-title">
-						<h6>{project.name}</h6>
+						<h4>{project.name}</h4>
 					</div>
 					<div className="projects__card-description">
 						<p>{project.description}</p>
@@ -39,7 +39,7 @@ export const ProjectsCardComponent: React.FC<Props> = (props) => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<GithubIcon color="var(--color-pure-white)" size={18} />
+						<GithubIcon color="currentColor" size={18} />
 						<span>GitHub</span>
 					</a>
 					<a
@@ -56,7 +56,7 @@ export const ProjectsCardComponent: React.FC<Props> = (props) => {
 							}
 						}}
 					>
-						<LinkIcon color="var(--color-pure-white)" size={18} />
+						<LinkIcon color="currentColor" size={18} />
 						<span>Live Demo</span>
 					</a>
 				</div>

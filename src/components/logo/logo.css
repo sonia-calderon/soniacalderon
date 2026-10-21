@@ -1,6 +1,12 @@
 @import "@/css/base/variables.css";
 
 .logo {
-    color: var(--color-primary);
+    display: inline-block;
+    color: var(--text-color-accent);
+    font-family: var(--font-title);
+    font-size: var(--fs-logo);
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-text);
     padding: var(--space-xs);
 }

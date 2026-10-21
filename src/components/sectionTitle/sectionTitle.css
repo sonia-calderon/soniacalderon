@@ -6,3 +6,10 @@
     align-items: center;
     text-align: center;
 }
+
+.section__title-heading {
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-tight);
+    color: var(--text-color);
+    text-align: center;
+}

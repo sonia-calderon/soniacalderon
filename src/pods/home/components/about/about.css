@@ -21,14 +21,14 @@
 }
 
 .about__avatar img {
-    width: 189px;
+    width: clamp(140px, 42vw, 189px);
 }
 
 .about__content {
     background-color: var(--color-secondary-dark);
     width: 100%;
     border-radius: var(--space-md);
-    color: var(--color-pure-white);
+    color: var(--text-color-on-dark-surface);
     animation: panel-enter 700ms ease-out 150ms both;
     transform-origin: center;
     transition:
@@ -77,7 +77,7 @@
 
 .about__content-text pre {
     overflow-x: auto;
-    font-size: clamp(0.7rem, 1.2vw, 0.95rem);
+    font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.95rem);
     line-height: 1.8;
     tab-size: 2;
 }
@@ -88,23 +88,23 @@
 }
 
 .keyword {
-  color: var(--color-terciary); /* const, return */
+  color: var(--color-code-keyword); /* const, return */
 }
 
 .property, .this  {
-  color: #FFC6AD; /* name, role, frontend... */
+  color: var(--color-code-property); /* name, role, frontend... */
 }
 
 .string {
-  color: var(--color-pure-white); /* "Sonia", "React"... */
+  color: var(--color-code-string); /* "Sonia", "React"... */
 }
 
 .variable, .method  {
-  color: #FF8A80; /* Developer */
+  color: var(--color-code-variable); /* Developer */
 }
 
 .operator, .punctuation {
-  color: #d6c7b0; /* =, &&, === */
+  color: var(--color-code-operator); /* =, &&, === */
 }
 
 @keyframes avatar-enter {
@@ -139,7 +139,7 @@
     }
 
     .about__avatar img {
-        width: 362px;
+        width: clamp(220px, 30vw, 362px);
     }
 
     .about__content-header {

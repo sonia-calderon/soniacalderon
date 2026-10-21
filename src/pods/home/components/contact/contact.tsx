@@ -10,21 +10,28 @@ export const ContactComponent: React.FC = () => {
 			<div className="contact__container">
 				<div className="contact__content">
 					<div className="contact__content-text">
-						<h3>Let's talk!</h3>
+						<p>Let's talk!</p>
 					</div>
 
 					<div className="contact__content-icons">
-						<a href="https://github.com/sonia-calderon" target="_blank">
-							<GithubIcon size={34} color="var(--color-neutral-700)" />
+						<a
+							href="https://github.com/sonia-calderon"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="GitHub"
+						>
+							<GithubIcon size={34} color="currentColor" />
 						</a>
-						<a href="mailto:soniacalderonruiz@hotmail.com">
-							<MailIcon size={34} color="var(--color-neutral-700)" />
+						<a href="mailto:soniacalderonruiz@hotmail.com" aria-label="Email">
+							<MailIcon size={34} color="currentColor" />
 						</a>
 						<a
 							href="https://www.linkedin.com/in/sonia-calderon-ruiz/"
 							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="LinkedIn"
 						>
-							<LinkedinIcon size={34} color="var(--color-neutral-700)" />
+							<LinkedinIcon size={34} color="currentColor" />
 						</a>
 					</div>
 				</div>

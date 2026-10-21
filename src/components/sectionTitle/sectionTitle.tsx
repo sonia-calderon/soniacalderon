@@ -9,7 +9,7 @@ export const SectionTitle: React.FC<Props> = (props) => {
 	const { title } = props;
 	return (
 		<div className="section__title">
-			<h3>{title}</h3>
+			<h3 className="section__title-heading">{title}</h3>
 		</div>
 	);
 };

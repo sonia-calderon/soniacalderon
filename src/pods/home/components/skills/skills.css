@@ -2,9 +2,9 @@
 
 .skills {
     background-color: var(--color-primary);
-    color: var(--color-pure-white);
-    font-size: var(--fs-text-sm);
-    font-weight: 500;
+    color: var(--text-color-on-primary);
+    font-size: var(--fs-skills);
+    font-weight: var(--fw-bold);
     letter-spacing: 0.04em;
     padding: var(--space-lg) 0;
     overflow: hidden;
@@ -51,21 +51,14 @@
 }
 
 .skills__separator {
-  color: var(--color-primary-light);
+  color: var(--color-pure-white);
   font-size: 0.65em;
   line-height: 1;
 }
 
-
-/*.skills__content span {
-  flex-shrink: 0;
-  padding-right: var(--space-lg);
-}*/
-
 @media (max-width: 768px) {
   .skills {
     padding: var(--space-md) 0;
-    font-size: var(--fs-text-sm);
   }
 
   .skills__list,

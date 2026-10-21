@@ -43,9 +43,9 @@ export const Nav: React.FC = () => {
 					onClick={handleMenu}
 				>
 					{isOpen ? (
-						<CloseIcon size={32} color="var(--text-color)" />
+						<CloseIcon size={32} color="currentColor" />
 					) : (
-						<HamburgerIcon size={32} color="var(--text-color)" />
+						<HamburgerIcon size={32} color="currentColor" />
 					)}
 				</button>
 			</div>
@@ -64,11 +64,11 @@ export const Nav: React.FC = () => {
 					))}
 				</ul>
 				<div className="nav__icon-mode">
-					<button onClick={handleThemeMode}>
+					<button type="button" aria-label="Toggle theme" onClick={handleThemeMode}>
 						{theme === "light" ? (
-							<DarkModeIcon size={24} color="var(--color-neutral-700)" />
+							<DarkModeIcon size={24} color="currentColor" />
 						) : (
-							<LightModeIcon size={24} color="var(--color-neutral-100)" />
+							<LightModeIcon size={24} color="currentColor" />
 						)}
 					</button>
 				</div>

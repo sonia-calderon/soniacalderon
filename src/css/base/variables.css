@@ -9,39 +9,67 @@
 :root {
     /* Colors */
     --color-primary: #D7764F;
+    --color-primary-strong: #B45634;  
     --color-primary-light: #E1C9AF;
     --color-secondary: #4F7553;
     --color-secondary-dark: #395537;
     --color-terciary: #98D2EB;
+    --color-terciary-strong: #17607A;  
 
-    --color-pure-white: #ffffff;  
+    --color-pure-white: #ffffff;
     --color-neutral-50: #FCFBF8;
     --color-neutral-100: #E8E5DE;
     --color-neutral-300: #C6C2B9;
     --color-neutral-500: #77756F;
+    --color-neutral-600: #6E6C66;
     --color-neutral-700: #393A36;
-    --color-neutral-900: #252722;  
+    --color-neutral-900: #252722;
     --color-pure-black: #000000;
+
+    /* Illustration colours */
+    --color-sun: #D7764F;
+    --color-moon: #F7F0D5;
+    --color-mountain-dark: #454B40;
+
+    /* Syntax highlighting */
+    --color-code-keyword: #98D2EB;
+    --color-code-property: #FFC6AD;
+    --color-code-string: #ffffff;
+    --color-code-variable: #FFB4AB;
+    --color-code-operator: #D6C7B0;
 
     /* Fonts */
     --font-title: 'Inter Variable', sans-serif;
     --font-body: 'Inter Variable', sans-serif;
 
-    /* Fluent typography */
-    --fs-h1: clamp(2.375rem, 1.5rem + 4.375vw, 4rem);           /* 38px → 64px */
-    --fs-h2: clamp(1.75rem, 1.25rem + 2.5vw, 3rem);             /* 28px → 48px */
-    --fs-h3: clamp(2.875rem, 2.25rem + 3.125vw, 3.625rem);      /* 46px → 58px */
-    --fs-h4: clamp(1.5rem, 1.125rem + 1.875vw, 2.25rem);        /* 24px → 36px */
-    --fs-h5: clamp(1.25rem, 0.875rem + 1.875vw, 2rem);          /* 20px → 32px */
-    --fs-h6: clamp(1.125rem, 0.875rem + 1.25vw, 1.75rem);       /* 18px → 28px */
-    --fs-text: clamp(1.0625rem, 0.875rem + 0.9375vw, 1.4375rem);/* 17px → 23px */
-    --fs-text-sm: clamp(0.875rem, 0.75rem + 0.625vw, 1.25rem);  /* 14px → 20px */
-    --fs-button: clamp(1.25rem, 0.75rem + 2.5vw, 2.125rem);     /* 20px → 34px */
+    /* Heading scale 
+       h1 hero name · h2 hero subtitle · h3 section title · h4 card title */
+    --fs-h1: clamp(2rem, 1.55rem + 2.15vw, 3.5rem);              /* 32px → 56px */
+    --fs-h2: clamp(1.5rem, 1.215rem + 1.43vw, 2.5rem);            /* 24px → 40px */
+    --fs-h3: clamp(1.75rem, 1.25rem + 2.5vw, 3rem);               /* 28px → 48px */
+    --fs-h4: clamp(1.25rem, 1.145rem + 0.535vw, 1.625rem);        /* 20px → 26px */
+    --fs-h5: clamp(1.125rem, 1.02rem + 0.54vw, 1.5rem);           /* 18px → 24px */
+    --fs-h6: clamp(1rem, 0.965rem + 0.18vw, 1.125rem);            /* 16px → 18px */
+
+    /* Content */
+    --fs-text: clamp(1rem, 0.9375rem + 0.375vw, 1.375rem);           /* 16px → 22px */
+    --fs-text-md: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);            /* 16px → 20px */
+    --fs-text-sm: clamp(0.8125rem, 0.78125rem + 0.15625vw, 1rem);    /* 13px → 16px */
+    --fs-text-xs: clamp(0.75rem, 0.734375rem + 0.078125vw, 0.875rem);/* 12px → 14px */
+    --fs-button: clamp(1.1875rem, 1.125rem + 0.3125vw, 1.375rem);     /* 19px → 22px */
+    --fs-logo: clamp(1.25rem, 1.125rem + 0.625vw, 1.5rem);            /* 20px → 24px */
+    --fs-skills: clamp(1.25rem, 1.1875rem + 0.3125vw, 1.375rem);      /* 20px → 22px */
 
     /* Font weights */
     --fw-regular: 400;
+    --fw-medium: 500;
     --fw-bold: 700;
     --fw-extrabold: 800;
+
+    /* Line heights */
+    --lh-tight: 1.1;
+    --lh-heading: 1.2;
+    --lh-body: 1.6;
 
     /* Letter spacing */
     --ls-text: 0.015625rem;   /* 0.25px */
@@ -62,17 +90,37 @@
     /* Light theme */
     --background: var(--color-neutral-50);
     --text-color: var(--color-neutral-700);
+    --text-color-muted: var(--color-neutral-600);
+    --text-color-accent: var(--color-primary);
+    --text-color-accent-blue: var(--color-terciary-strong);
+    --text-color-on-dark-surface: var(--color-pure-white);
+    --text-color-on-primary: var(--color-pure-white);
+    --text-color-on-terciary: #12475A;
     --surface: var(--color-neutral-50);
     --border-color: var(--color-neutral-100);
+    --card-border-color: var(--color-secondary);
+    --focus-ring-color: var(--color-primary-strong);
+    --chip-background: var(--color-primary-light);
+    --chip-text-color: var(--color-neutral-700);
+    --chip-border-color: var(--color-primary);
     --header-shadow: 0 4px 16px rgb(37 39 34 / 8%);
 }
 
 
 /* Dark theme */
 [data-theme="dark"] {
-    --background: var(--color-neutral-900);  
-    --text-color: var(--color-neutral-100);  
+    --background: var(--color-neutral-900);
+    --text-color: var(--color-neutral-100);
+    --text-color-muted: var(--color-neutral-300);
+    --text-color-accent: var(--color-primary);
+    --text-color-accent-blue: var(--color-terciary);
+    --text-color-on-dark-surface: var(--color-pure-white);
     --surface: #2E302A;
     --border-color: #41433C;
+    --card-border-color: var(--color-neutral-500);
+    --focus-ring-color: var(--color-primary);
+    --chip-background: var(--color-neutral-900);
+    --chip-text-color: var(--color-neutral-100);
+    --chip-border-color: var(--color-primary);
     --header-shadow: 0 4px 18px rgb(0 0 0 / 20%);
 }

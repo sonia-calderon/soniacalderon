@@ -30,10 +30,19 @@ export const ProjectsComponent: React.FC = () => {
 	const buttonText = showAll ? "I want to see less" : "I want to see more";
 
 	return (
-		<section className="projects" id="projects">
+		<section
+			className="projects"
+			id="projects"
+			aria-labelledby="projects-title"
+		>
 			<div className="projects__container">
-				<SectionTitle title="Projects" />
+				<SectionTitle
+					visuallyHidden={false}
+					title="Projects"
+					id="projects-title"
+				/>
 				<div
+					id="projects-list"
 					className={`projects__cards ${
 						isHiding ? "projects__cards--hiding" : ""
 					}`}
@@ -47,6 +56,8 @@ export const ProjectsComponent: React.FC = () => {
 					color="orange"
 					action="none"
 					handleClick={handleToggle}
+					controlsId="projects-list"
+					expanded={showAll}
 				/>
 			</div>
 		</section>

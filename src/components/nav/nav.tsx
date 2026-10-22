@@ -16,18 +16,57 @@ const navLinks: {
 
 type Theme = "dark" | "light";
 
+const THEME_STORAGE_KEY = "theme";
+const NAV_MENU_ID = "nav-menu";
+
+const getInitialTheme = (): Theme => {
+	try {
+		const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+		if (stored === "dark" || stored === "light") return stored;
+
+		return window.matchMedia("(prefers-color-scheme: dark)").matches
+			? "dark"
+			: "light";
+	} catch {
+		return "light";
+	}
+};
+
 export const Nav: React.FC = () => {
-	const [theme, setTheme] = React.useState<Theme>("light");
+	const [theme, setTheme] = React.useState<Theme>(getInitialTheme);
 	const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
 	const handleThemeMode = () => {
-		setTheme(theme === "light" ? "dark" : "light");
+		setTheme((current) => {
+			const next = current === "light" ? "dark" : "light";
+
+			try {
+				window.localStorage.setItem(THEME_STORAGE_KEY, next);
+			} catch {
+				// Theme still works for this session.
+			}
+
+			return next;
+		});
 		setIsOpen(false);
 	};
 
 	useEffect(() => {
 		document.body.setAttribute("data-theme", theme);
+		document.documentElement.style.colorScheme = theme;
 	}, [theme]);
+
+	useEffect(() => {
+		if (!isOpen) return;
+
+		const handleKeyDown = (event: KeyboardEvent) => {
+			if (event.key === "Escape") setIsOpen(false);
+		};
+
+		document.addEventListener("keydown", handleKeyDown);
+
+		return () => document.removeEventListener("keydown", handleKeyDown);
+	}, [isOpen]);
 
 	const handleMenu = () => {
 		setIsOpen(!isOpen);
@@ -40,6 +79,7 @@ export const Nav: React.FC = () => {
 					type="button"
 					aria-label={isOpen ? "Close menu" : "Open menu"}
 					aria-expanded={isOpen}
+					aria-controls={NAV_MENU_ID}
 					onClick={handleMenu}
 				>
 					{isOpen ? (
@@ -49,7 +89,7 @@ export const Nav: React.FC = () => {
 					)}
 				</button>
 			</div>
-			<div className="nav__content">
+			<div className="nav__content" id={NAV_MENU_ID}>
 				<ul className="nav__items">
 					{navLinks.map((item) => (
 						<li className="nav__item" key={item.href}>
@@ -64,7 +104,12 @@ export const Nav: React.FC = () => {
 					))}
 				</ul>
 				<div className="nav__icon-mode">
-					<button type="button" aria-label="Toggle theme" onClick={handleThemeMode}>
+					<button
+						type="button"
+						aria-label="Toggle dark theme"
+						aria-pressed={theme === "dark"}
+						onClick={handleThemeMode}
+					>
 						{theme === "light" ? (
 							<DarkModeIcon size={24} color="currentColor" />
 						) : (

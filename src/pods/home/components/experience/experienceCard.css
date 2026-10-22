@@ -19,6 +19,11 @@
 
 .experience__card-content h4 {
     color: var(--text-color-accent);
+    font-size: var(--fs-h5);
+}
+
+.experience__card-content p {
+    font-size: var(--fs-text-md);
 }
 
 .experience__card-year {

@@ -4,7 +4,7 @@ import "./hero.css";
 
 export const HeroComponent: React.FC = () => {
 	return (
-		<section className="hero">
+		<section className="hero" id="top">
 			<div className="hero__container">
 				<div className="hero__content">
 					<h1>

@@ -4,6 +4,8 @@ export const HeroIlustration: React.FC<IconProps> = ({ size = "100%" }) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
+			aria-hidden="true"
+			focusable="false"
 			width={size}
 			viewBox="0 0 1482 640"
 			fill="none"

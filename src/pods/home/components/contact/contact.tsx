@@ -6,7 +6,7 @@ import { LinkedinIcon } from "@/components/icons/linkedin";
 
 export const ContactComponent: React.FC = () => {
 	return (
-		<section className="contact" id="contact">
+		<section className="contact" id="contact" aria-label="Contact">
 			<div className="contact__container">
 				<div className="contact__content">
 					<div className="contact__content-text">

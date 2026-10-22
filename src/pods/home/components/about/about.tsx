@@ -1,12 +1,13 @@
 import React from "react";
 import "./about.css";
 import Avatar from "@/assets/images/avatar.png";
+import { SectionTitle } from "@/components/sectionTitle/sectionTitle";
 
 export const AboutComponent: React.FC = () => {
 	return (
-		<section className="about" id="who-i-am">
+		<section className="about" id="who-i-am" aria-labelledby="about-title">
 			<div className="about__container">
-				<h2 className="visually-hidden">About me</h2>
+				<SectionTitle title="About me" id="about-title" visuallyHidden={true} />
 
 				<div className="about__avatar">
 					<img src={Avatar} alt="Portrait of Sonia" />

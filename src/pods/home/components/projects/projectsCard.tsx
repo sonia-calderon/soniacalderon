@@ -10,11 +10,12 @@ interface Props {
 
 export const ProjectsCardComponent: React.FC<Props> = (props) => {
 	const { project } = props;
+	const hasLiveDemo = Boolean(project.liveDemoLink);
 
 	return (
 		<div className="projects__card">
 			<div className="projects__card-img">
-				<img src={project.image} alt={project.name} />
+				<img src={project.image} alt={`Screenshot of ${project.name}`} />
 			</div>
 			<div className="projects__card-content">
 				<div className="projects__card-content-labels">
@@ -43,18 +44,11 @@ export const ProjectsCardComponent: React.FC<Props> = (props) => {
 						<span>GitHub</span>
 					</a>
 					<a
-						href={project.liveDemoLink}
-						className={`projects__card-btn-live ${
-							project.liveDemoLink === "" ? "disabled" : ""
-						}`}
+						href={hasLiveDemo ? project.liveDemoLink : undefined}
+						className={`projects__card-btn-live ${hasLiveDemo ? "" : "disabled"}`}
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-disabled={project.liveDemoLink === ""}
-						onClick={(event) => {
-							if (project.liveDemoLink === "") {
-								event.preventDefault();
-							}
-						}}
+						aria-disabled={!hasLiveDemo}
 					>
 						<LinkIcon color="currentColor" size={18} />
 						<span>Live Demo</span>
